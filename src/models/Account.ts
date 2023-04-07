@@ -3,7 +3,7 @@ export class Account {
     email: string;
     name: string;
     picture: string;
-    // Define Additional Properties here
+    // TODO Define Additional Properties here
 
     constructor(data?: { id?: string; email?: string; name?: string; picture?: string }) {
         this.id = data?.id ?? '';
