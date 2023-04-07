@@ -1,7 +1,13 @@
 import '@mdi/font/css/materialdesignicons.css'
 import 'bootstrap'
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import { registerGlobalComponents } from './registerGlobalComponents'
+import { router } from './router'
 
-createApp(App).mount('#app')
+const root = createApp(App)
+registerGlobalComponents(root)
+
+root
+    .use(router)
+    .mount('#app')

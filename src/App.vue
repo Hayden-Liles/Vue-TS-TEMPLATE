@@ -1,27 +1,32 @@
 
 <template>
+  <header>
+    <!-- HEADER IF NEEDED -->
+  </header>
+
+  <main>
+    <router-view/>
+  </main>
+
+  <footer>
+    <!-- FOOTER IF NEEDED -->
+  </footer>
 
 </template>
 
 <script lang="ts">
-export default{
-  setup(){
-    return{}
+import { computed } from 'vue';
+import { AppState } from './AppState';
+
+export default {
+  setup() {
+    return {
+      appState: computed(() => AppState),
+    }
   }
 }
 </script>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+@import "./assets/scss/main.scss";
 </style>
