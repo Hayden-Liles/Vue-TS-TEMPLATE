@@ -1,3 +1,4 @@
+// @ts-ignore
 {
     "compilerOptions": {
         "target": "esnext",
@@ -5,6 +6,26 @@
         "moduleResolution": "node",
         "importHelpers": true,
         "isolatedModules": true,
-        "noEmit": true
-    }
+        "noEmit": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./types"
+        ]
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
 }

@@ -3,9 +3,15 @@
 
 
 <script lang="ts">
+import { onMounted } from 'vue';
+import { logger } from '../services/Logger';
+
 
 export default {
     setup() {
+        onMounted(() => {
+            logger.log('ho')
+        })
         return {};
     },
 }
