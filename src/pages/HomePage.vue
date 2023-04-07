@@ -1,16 +1,16 @@
 <template>
-    <div>
-
-        aasdsdasd
-    </div>
+    <TestComponent/>
 </template>
 
 
 <script lang="ts">
+import TestComponent from '../components/TestComponent.vue';
+
 export default {
-    setup(){
-        return {}
-    }
+    setup() {
+        return {};
+    },
+    components: { TestComponent }
 }
 </script>
 
