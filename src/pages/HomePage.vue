@@ -4,13 +4,13 @@
 
 <script lang="ts">
 import { onMounted } from 'vue';
-import { logger } from '../utils/Logger';
+import Pop from '../utils/Pop'
 
 
 export default {
     setup() {
         onMounted(() => {
-            logger.log('ho')
+            Pop.confirm("hi")
         })
         return {};
     },
