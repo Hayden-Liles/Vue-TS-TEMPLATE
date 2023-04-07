@@ -6,6 +6,7 @@ import { accountService } from './AccountService';
 import { api } from './AxiosService';
 import { socketService } from './SocketService';
 import { AxiosRequestConfig } from 'axios';
+import { Account } from '../models/Account';
 
 export const AuthService = initialize({
     domain,
@@ -21,7 +22,10 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async () => {
     api.defaults.headers.authorization = AuthService.bearer;
     api.interceptors.request.use(refreshAuthToken as any);
     AppState.user = AuthService.user;
-    await accountService.getAccount();
+    AppState.account = new Account(AuthService.user)
+    // NOTE COMMENT ^ THIS OUT IF YOU HAVE A BACKEND
+    // NOTE UNCOMMENT V THIS IF YOU HAVE A BACKEND
+    // await accountService.getAccount();
     socketService.authenticate(AuthService.bearer);
 });
 

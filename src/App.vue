@@ -1,7 +1,7 @@
 
 <template>
   <header>
-    <!-- HEADER IF NEEDED -->
+    <Navbar/>
   </header>
 
   <main>
@@ -17,13 +17,15 @@
 <script lang="ts">
 import { computed } from 'vue';
 import { AppState } from './AppState';
+import Navbar from './components/Navbar.vue';
 
 export default {
-  setup() {
-    return {
-      appState: computed(() => AppState),
-    }
-  }
+    setup() {
+        return {
+            appState: computed(() => AppState),
+        };
+    },
+    components: { Navbar }
 }
 </script>
 
