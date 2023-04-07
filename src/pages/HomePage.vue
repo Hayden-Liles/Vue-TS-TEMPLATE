@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { onMounted } from 'vue';
-import { logger } from '../services/Logger';
+import { logger } from '../utils/Logger';
 
 
 export default {
