@@ -1,6 +1,9 @@
 export const dev = window.location.origin.includes('localhost')
+// baseURL - to connect ot your backend or to your api...
 export const baseURL = dev ? 'http://localhost:3000' : ''
+// useSockets - disabled by default but feel free to enable
 export const useSockets = false
-export const domain = 'haydensdomain.us.auth0.com'
-export const clientId = 'cZ6bJgwJg7p3vIfjHgvC3GhyYPDfOUmD'
-export const audience = 'https://haydens-api.com'
+// AUTH STUFF VVVV
+export const domain = ''
+export const clientId = ''
+export const audience = ''
