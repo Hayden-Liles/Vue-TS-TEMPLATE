@@ -1,10 +1,10 @@
 import { App } from 'vue'
 import { ComponentOptions } from 'vue'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Component extends ComponentOptions { }
 
 export function registerGlobalComponents(root: App) {
-    // @ts-ignore
     const components: Record<string, Component> = import.meta.globEager('./components/*.vue')
     Object.entries(components).forEach(([fileName, component]) => {
         const componentName = component.name || fileName

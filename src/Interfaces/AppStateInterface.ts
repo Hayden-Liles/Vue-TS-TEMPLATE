@@ -1,7 +1,7 @@
 import { Account } from '../models/Account';
 
 export interface AppStateInterface {
-    user: any;
+    user: object;
     account: Account;
     // To dofine what the property will be
 }

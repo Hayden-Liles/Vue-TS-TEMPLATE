@@ -12,6 +12,7 @@
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
+        "types": ["vite/client"],
         "lib": [
             "dom",
             "es2017"

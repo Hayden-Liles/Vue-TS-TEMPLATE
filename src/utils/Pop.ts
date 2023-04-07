@@ -4,9 +4,9 @@ import { logger } from './Logger';
 
 export default class Pop {
     static async confirm(
-        title: string = 'Are you sure?',
-        text: string = "You won't be able to revert this!",
-        confirmButtonText: string = 'Yes',
+        title = 'Are you sure?',
+        text = "You won't be able to revert this!",
+        confirmButtonText = 'Yes',
         icon: SweetAlertIcon = 'warning'
     ): Promise<boolean> {
         try {
@@ -28,11 +28,11 @@ export default class Pop {
     }
 
     static toast(
-        title: string = 'Warning!',
+        title = 'Warning!',
         icon: SweetAlertIcon = 'warning',
         position: SweetAlertPosition = 'top-end',
-        timer: number = 3000,
-        progressBar: boolean = true
+        timer = 3000,
+        progressBar = true
     ): void {
         Swal.fire({
             title,
@@ -45,7 +45,7 @@ export default class Pop {
         });
     }
 
-    static error(error: Error | string, eventTrigger: string = ''): void {
+    static error(error: Error | string, eventTrigger = ''): void {
         if (error instanceof Error && 'isAxiosError' in error && error.isAxiosError) {
             logger.error(eventTrigger, error);
             const { response } = error as any;
@@ -60,7 +60,7 @@ export default class Pop {
     }
 
 
-    static success(message: string = 'Success!'): void {
+    static success(message = 'Success!'): void {
         this.toast(message, 'success');
     }
 }

@@ -2,6 +2,7 @@ import { initialize } from '@bcwdev/auth0provider-client';
 import { AppState } from '../AppState';
 import { audience, clientId, domain } from '../env';
 import { router } from '../router';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { accountService } from './AccountService';
 import { api } from './AxiosService';
 import { socketService } from './SocketService';

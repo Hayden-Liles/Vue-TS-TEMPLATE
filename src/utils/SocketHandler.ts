@@ -17,10 +17,10 @@ const SOCKET_EVENTS = {
 
 export class SocketHandler {
     private socket: Socket | null = null;
-    private requiresAuth: boolean = false;
+    private requiresAuth = false;
     private queue: { action: string; payload: Payload }[] = [];
-    private authenticated: boolean = false;
-    private connected: boolean = false;
+    private authenticated = false;
+    private connected = false;
 
     constructor(requiresAuth = false, url = baseURL) {
         if (!useSockets) return;
